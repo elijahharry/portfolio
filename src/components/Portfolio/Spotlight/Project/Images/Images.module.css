@@ -1,0 +1,22 @@
+.images {
+  position: relative;
+  height: 500px;
+  flex-basis: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: all 1s;
+}
+
+@media (max-width: 1160px) {
+  .images {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 530px) {
+  .images {
+    height: 300px;
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,105 @@
+.holder {
+  flex: 1 1 0px;
+  padding: 10px;
+  padding-bottom: 0;
+  cursor: pointer;
+  position: relative;
+}
+.tile {
+  width: 100%;
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 500ms;
+  pointer-events: none;
+  z-index: 1;
+}
+.tile img {
+  transition: all 0.8s;
+}
+
+.tile_selected {
+  transform: translateY(0);
+}
+
+.tile_def {
+  transform: translateY(70px);
+}
+
+.tile_def img {
+  filter: saturate(40%) brightness(75%);
+}
+
+.tile_def:hover {
+  transform: translateY(50px);
+  transition: all 300ms;
+}
+
+.frame {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  filter: brightness(70%);
+}
+
+.screen {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  border-left: 3px solid rgb(48, 48, 48);
+  border-right: 3px solid rgb(48, 48, 48);
+}
+
+.logo {
+  height: 40px;
+  position: absolute;
+  top: 30%;
+  z-index: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  transition: all 0.65s;
+}
+
+.logo_selected {
+  transform: translateX(-50%) translateY(-105px);
+}
+
+.logo_def {
+  transform: translateX(-50%) translateY(-45px);
+  filter: grayscale(100%);
+}
+
+.bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgb(48, 48, 48);
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.dot {
+  margin-left: 3px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+.red {
+  background: rgb(218, 91, 91);
+}
+
+.yellow {
+  background: rgb(214, 171, 78);
+}
+
+.green {
+  background: rgb(60, 209, 122);
+}

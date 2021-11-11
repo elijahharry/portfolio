@@ -1,0 +1,50 @@
+.buttons {
+  display: flex;
+  align-items: stretch;
+  margin-top: 5px;
+  position: relative;
+}
+
+.button {
+  transition: all 50ms;
+}
+
+.button button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 8px 13px;
+  white-space: nowrap;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  transition: all 0.75s;
+}
+.button:hover {
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+.button svg {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 5px;
+}
+
+.button_selected button {
+  transform: scale(1);
+}
+.button_def button {
+  /* transform: scale(0.2) translateX(-500px) translateY(-50px); */
+  transform: translateX(-75vw);
+  opacity: 0;
+  transition-delay: 0s !important;
+}

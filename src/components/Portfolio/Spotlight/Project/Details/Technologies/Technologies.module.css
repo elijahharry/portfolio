@@ -1,0 +1,68 @@
+.tech {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  max-width: 400px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* max-width: 500px; */
+}
+
+@media (max-width: 1160px) {
+  .tech {
+    position: relative;
+    justify-content: center;
+  }
+}
+
+.logo {
+  filter: sepia(100%) brightness(20000%);
+  margin-right: 20px;
+  object-fit: contain;
+  object-position: left center;
+  height: 50px;
+  margin-top: 5px;
+  transition: all 300ms;
+}
+
+.logo_selected {
+  transform: scale(1);
+}
+.logo_def {
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.react {
+  width: 32px;
+}
+
+.next {
+  width: 65px;
+}
+
+.node {
+  width: 77px;
+  margin-top: 0px;
+}
+
+.mongo {
+  width: 90px;
+}
+
+.shopify {
+  width: 60px;
+}
+
+.auth0 {
+  width: 75px;
+}
+
+.twitter {
+  width: 35px;
+}
+
+.graphql {
+  width: 95px;
+}

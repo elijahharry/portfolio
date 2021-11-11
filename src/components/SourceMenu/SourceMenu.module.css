@@ -1,0 +1,129 @@
+.section {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.486);
+  transition: all 500ms;
+  backdrop-filter: blur(10px) brightness(70%);
+  color: #fff;
+}
+
+.open {
+  opacity: 1;
+}
+
+.close {
+  opacity: 0;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+}
+
+.header svg {
+  margin-top: 3px;
+  margin-right: 10px;
+  font-size: 2.8rem;
+}
+
+.container p {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+}
+
+@media (max-width: 530px) {
+  .buttons {
+    flex-direction: column;
+  }
+  .button {
+    width: 92vw;
+  }
+}
+
+.button {
+  outline: 0;
+  border: 0;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 10px 15px;
+  white-space: nowrap;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 50ms;
+  margin: 10px;
+  font-weight: 700;
+}
+
+.button svg {
+  margin-top: 2px;
+  margin-right: 8px;
+}
+
+.button:hover {
+  filter: brightness(70%);
+  transform: scale(0.95);
+}
+
+.media {
+  display: flex;
+  align-items: center;
+}
+
+.github {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.logo {
+  height: 70px;
+}
+
+.exit {
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  font-size: 5rem;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.exit:hover {
+  filter: brightness(80%);
+  transform: scale(0.9);
+}
+
+@media (max-width: 900px) {
+  .exit {
+    top: 2vh;
+    right: 2vh;
+  }
+}
+
+.close svg {
+  fill: #fff;
+}

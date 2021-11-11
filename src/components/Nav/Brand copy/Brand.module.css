@@ -1,0 +1,39 @@
+.brand {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.logo::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.logo img {
+  height: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 960px) {
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+}
