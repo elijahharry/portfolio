@@ -43,7 +43,7 @@ const projects = [
       primary: "#94d8eb",
       secondary: "#699eca",
     },
-    tech: ["next", "react", "graphql"],
+    tech: ["next", "react"],
   },
   {
     id: "storkies",
