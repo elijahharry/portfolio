@@ -2,7 +2,7 @@
   width: 100%;
   padding: 40px 0;
   position: relative;
-  z-index: 0;
+  z-index: 1;
   color: #fff;
   min-height: 630px;
 }
@@ -20,6 +20,9 @@
 }
 
 @media (max-width: 1160px) {
+  .section {
+    padding: 0;
+  }
   .projects {
     flex-wrap: wrap;
     width: 100vw !important;

@@ -17,6 +17,7 @@ html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -28,8 +29,7 @@ b {
   font-weight: 700;
 }
 button {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 body {
   color: rgba(0, 0, 0, 0.87);
@@ -147,6 +147,16 @@ p.intro {
 }
 
 .preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.transition-zero * {
+  transition-delay: 0 !important;
+  transition-duration: 0 !important;
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;

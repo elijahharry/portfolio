@@ -1,15 +1,14 @@
 .section {
   position: relative;
   z-index: 2;
-  backdrop-filter: brightness(140%);
+  /* backdrop-filter: brightness(140%); */
+  backdrop-filter: brightness(70%) blur(30px);
   transition: all 2s;
   color: #fff;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.219);
-  background: #232526;
+  /* background: #232526;
   background: -webkit-linear-gradient(to right, #2c2f30, #545658, #242627);
-  background: linear-gradient(to right, #1a1c1d, #3c3e3f, #1a1c1d);
-  /* background-size: 400% 400%; */
-  /* animation: gradient 15s ease infinite; */
+  background: linear-gradient(to right, #1a1c1d, #3c3e3f, #1a1c1d); */
 }
 
 .row {
@@ -45,16 +44,4 @@
 
 .title_hide {
   /* transform: scale(1); */
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }

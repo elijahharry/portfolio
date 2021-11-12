@@ -9,6 +9,7 @@ import WheelReact from "wheel-react";
 import Spotlight from "./Spotlight/Spotlight";
 import Tiles from "./Tiles/Tiles";
 import Backdrops from "@components/Backdrops/Backdrops";
+import Gradient from "./Gradient/Gradient";
 
 import classes from "./Portfolio.module.css";
 
@@ -30,7 +31,7 @@ const Portfolio = ({ projects, allImages }) => {
   };
 
   const theme = useTheme();
-  const { setColors, setPartnerLogo } = theme;
+  const { setColors, setPartnerLogo, primary, secondary } = theme;
   useEffect(() => {
     const selectedProject = projects[selected];
     if (selectedProject?.colors) {
@@ -76,26 +77,31 @@ const Portfolio = ({ projects, allImages }) => {
   }, []);
 
   return (
-    <section
-      className={classes.portfolio}
-      {...WheelReact.events}
-      id="portfolio"
-    >
-      <Spotlight
-        projects={projects}
-        selected={selected}
-        pickRandom={pickRandom}
-        setSelected={setSelected}
-        allImages={allImages}
-      />
-      {screen.width > 1160 && (
-        <Tiles
+    <>
+      <section
+        className={classes.portfolio}
+        {...WheelReact.events}
+        id="portfolio"
+      >
+        {screen.width > 1160 && (
+          <Gradient primary={primary} secondary={secondary} />
+        )}
+        <Spotlight
           projects={projects}
           selected={selected}
+          pickRandom={pickRandom}
           setSelected={setSelected}
+          allImages={allImages}
         />
-      )}
-    </section>
+        {screen.width > 1160 && (
+          <Tiles
+            projects={projects}
+            selected={selected}
+            setSelected={setSelected}
+          />
+        )}
+      </section>
+    </>
   );
 };
 

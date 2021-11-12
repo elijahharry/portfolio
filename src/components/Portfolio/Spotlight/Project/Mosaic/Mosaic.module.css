@@ -20,5 +20,18 @@
 @media (max-width: 1160px) {
   .mosaic {
     flex-basis: 100%;
+    animation: mosaic-mobile 60s infinite;
+  }
+}
+
+@keyframes mosaic-mobile {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(-80%);
+  }
+  100% {
+    transform: translateX(-10%);
   }
 }

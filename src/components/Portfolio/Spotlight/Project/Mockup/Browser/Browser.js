@@ -41,7 +41,7 @@ const Browser = ({ isSelected, index, images, screen, cursor }) => {
           transform: `translateX(${transforms.x}px) translateY(${transforms.y}px)`,
           filter: `drop-shadow(${transforms.x * -1}px ${
             transforms.y * -1
-          }px 20px #000)`,
+          }px 20px rgba(0, 0, 0, .35))`,
         }}
       >
         {/* <StandSvg /> */}

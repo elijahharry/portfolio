@@ -1,6 +1,10 @@
+import { useScreenSize } from "@context/ScreenSize";
+
 import Details from "./Details/Details";
 import Mosaic from "./Mosaic/Mosaic";
 import Mockup from "./Mockup/Mockup";
+import Gradient from "@components/Portfolio/Gradient/Gradient";
+
 import classes from "./Project.module.css";
 
 const Project = ({
@@ -13,6 +17,8 @@ const Project = ({
   setGradient,
   allImages,
 }) => {
+  const screen = useScreenSize();
+
   return (
     <div
       key={`project-${i}`}
@@ -22,6 +28,12 @@ const Project = ({
       }`}
       id={project.id}
     >
+      {screen.width <= 1160 && (
+        <Gradient
+          primary={project?.colors?.primary}
+          secondary={project?.colors?.secondary}
+        />
+      )}
       <div className="container">
         <div
           className={`${classes.item} ${

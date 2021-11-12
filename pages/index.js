@@ -1,11 +1,9 @@
 import { getProjects, fetchDesktopImages } from "@utils/projects";
 
 import Main from "@components/Main";
-import Titles from "@components/Titles/Titles";
 import Portfolio from "@components/Portfolio/Portfolio";
 
 export default function Home({ projects, allImages }) {
-  console.log(projects[3].palette);
   return (
     <Main>
       <Portfolio projects={projects} allImages={allImages} />

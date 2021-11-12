@@ -4,10 +4,11 @@ import classes from "./Technologies.module.css";
 
 const Technologies = ({ tech, isSelected }) => {
   const [technologies, setTechnologies] = useState([...tech]);
+
   useEffect(() => {
-    const shuffled = shuffle(tech);
+    const shuffled = shuffle([...tech]);
     setTechnologies(shuffled);
-  }, [tech]);
+  }, []);
 
   return (
     <div className={classes.tech}>

@@ -1,6 +1,5 @@
 import projects from "@constants/projects";
 import { generatePlaceholders } from "./placeholders";
-import { getPalette } from "./colors";
 
 export const getProjects = async () => {
   const finishedProjects = [];
@@ -14,15 +13,11 @@ export const getProjects = async () => {
         mobile.push({ src: `${prefix}-${i}-m.${type}` });
       }
       try {
-        const palette = await getPalette(`${prefix}-1-c.${type}`);
-        console.log(palette);
-        const paletteJSON = await JSON.parse(palette);
         const finishedDesktops = await generatePlaceholders(desktop);
         const finishedMobile = await generatePlaceholders(mobile);
         finishedProjects.push({
           ...project,
           images: { desktop: finishedDesktops, mobile: finishedMobile },
-          palette: paletteJSON,
         });
       } catch (e) {
         finishedProjects.push({
