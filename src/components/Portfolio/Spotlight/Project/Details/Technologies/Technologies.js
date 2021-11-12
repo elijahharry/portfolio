@@ -21,6 +21,7 @@ const Technologies = ({ tech, isSelected }) => {
             isSelected ? classes.logo_selected : classes.logo_def
           } ${classes[t]}`}
           src={`/img/${t}.svg`}
+          key={`img-${t}`}
         />
       ))}
     </div>

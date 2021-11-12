@@ -41,6 +41,7 @@ const Buttons = ({ logo, colors, buttons, pickRandom, isSelected }) => {
       if (button.function === "random") {
         elements.push(
           <a
+            key={`button-${i}`}
             className={`${classes.button} ${
               isSelected ? classes.button_selected : classes.button_def
             }`}
@@ -55,6 +56,7 @@ const Buttons = ({ logo, colors, buttons, pickRandom, isSelected }) => {
       } else if (button.function === "github") {
         elements.push(
           <a
+            key={`button-${i}`}
             className={`${classes.button} ${
               isSelected ? classes.button_selected : classes.button_def
             }`}
@@ -77,8 +79,10 @@ const Buttons = ({ logo, colors, buttons, pickRandom, isSelected }) => {
       if (button?.target) {
         elements.push(
           <a
+            key={`button-${i}`}
             href={button.href}
             target={button.target}
+            rel="noreferrer"
             className={`${classes.button} ${
               isSelected ? classes.button_selected : classes.button_def
             }`}

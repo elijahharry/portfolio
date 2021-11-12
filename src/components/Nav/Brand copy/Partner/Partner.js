@@ -21,6 +21,7 @@ const Partner = () => {
           (project) =>
             project?.logo && (
               <img
+                key={`logo-${project.logo}`}
                 src={`/img/${project.logo}`}
                 className={`${classes.logo} ${
                   project.logo === partnerLogo

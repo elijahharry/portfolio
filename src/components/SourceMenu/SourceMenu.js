@@ -56,7 +56,7 @@ const SourceMenu = () => {
             Click a button below to open up the respective repo in a new tab.
           </p>
           <div className={classes.buttons}>
-            <a href={links?.client} target="_blank">
+            <a href={links?.client} target="_blank" rel="noreferrer">
               <button
                 style={{
                   background: theme.primary,
@@ -69,7 +69,7 @@ const SourceMenu = () => {
                 Frontend
               </button>
             </a>
-            <a href={links?.server} target="_blank">
+            <a href={links?.server} target="_blank" rel="noreferrer">
               <button
                 style={{
                   background: theme.secondary,

@@ -45,6 +45,7 @@ const Images = ({ images, isSelected }) => {
           isMain={i === main}
           isNext={i === next}
           wasPrevious={i === previous}
+          key={`img-${i}`}
         />
       ))}
     </div>

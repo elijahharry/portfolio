@@ -49,10 +49,11 @@ const Phone = ({ isSelected, index, images, screen, cursor }) => {
             className={classes.phone_track}
             style={{ transform: `translateX(-${index * width}px)` }}
           >
-            {images.map((img) => (
+            {images.map((img, i) => (
               <div
                 className={classes.phone_slide}
                 style={{ width: width, minWidth: width }}
+                key={`phone-img-${i}`}
               >
                 <img className={classes.phone_screen} src={`/img/${img.src}`} />
               </div>

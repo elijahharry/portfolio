@@ -22,6 +22,7 @@ const Mosaic = ({ images, isSelected, setSelected }) => {
           index={i}
           isSelected={isSelected}
           setSelected={setSelected}
+          key={`mosiac-tile-${i}`}
         />
       ))}
     </ul>

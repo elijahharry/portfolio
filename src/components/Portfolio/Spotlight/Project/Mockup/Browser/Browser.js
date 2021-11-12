@@ -56,10 +56,11 @@ const Browser = ({ isSelected, index, images, screen, cursor }) => {
               className={classes.computer_track}
               style={{ transform: `translateX(-${index * width}px)` }}
             >
-              {images.map((img) => (
+              {images.map((img, i) => (
                 <div
                   style={{ width: width, minWidth: width }}
                   className={classes.computer_slide}
+                  key={`browser-img-${i}`}
                 >
                   <img src={`/img/${img.src}`} />
                 </div>

@@ -30,6 +30,7 @@ const Tiles = ({ projects, selected, setSelected }) => {
                   project={project}
                   isSelected={i === selected}
                   handleSwitch={() => handleSwitch(i, project?.colors)}
+                  key={`tile-${i}`}
                 />
               )
           )}

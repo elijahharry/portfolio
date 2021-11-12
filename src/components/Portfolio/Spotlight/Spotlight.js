@@ -32,6 +32,7 @@ const Spotlight = ({
             setSelected={setSelected}
             setGradient={setGradient}
             allImages={allImages}
+            key={project.id}
           />
         ))}
       </div>
