@@ -5,7 +5,8 @@
   /* backdrop-filter: brightness(70%) blur(30px); */
   transition: all 2s;
   color: #fff;
-  /* box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.219); */
+  box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #fff;
   /* background: #232526;
   background: -webkit-linear-gradient(to right, #2c2f30, #545658, #242627);
   background: linear-gradient(to right, #1a1c1d, #3c3e3f, #1a1c1d); */

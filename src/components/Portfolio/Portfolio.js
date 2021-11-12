@@ -83,9 +83,9 @@ const Portfolio = ({ projects, allImages }) => {
         {...WheelReact.events}
         id="portfolio"
       >
-        {screen.width > 1160 && (
+        {/* {screen.width > 1160 && (
           <Gradient primary={primary} secondary={secondary} />
-        )}
+        )} */}
         <Spotlight
           projects={projects}
           selected={selected}

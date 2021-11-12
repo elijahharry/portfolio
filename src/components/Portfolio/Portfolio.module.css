@@ -2,9 +2,8 @@
   max-height: 100vh;
   height: 100vh;
   padding-top: 100px;
-  /* background: #232526;
-  background: -webkit-linear-gradient(to right, #232526, #414345, #232526);
-  background: linear-gradient(to right, #141616, #141616, #2c2d2e, #141616); */
+  background: #232526;
+  background: linear-gradient(to right, #080808, #131313, #222222, #0f0f0f);
 }
 
 @media (max-width: 1160px) {

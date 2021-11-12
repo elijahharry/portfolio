@@ -1,4 +1,6 @@
 import Backdrops from "@components/Backdrops/Backdrops";
+import Gradient from "../Gradient/Gradient";
+import { useTheme } from "@context/Theme";
 
 import Tile from "./Tile/Tile";
 import classes from "./Tiles.module.css";
@@ -11,6 +13,9 @@ const Tiles = ({ projects, selected, setSelected }) => {
       setSelected(index);
     }
   };
+
+  const theme = useTheme();
+  const { primary, secondary } = theme;
 
   return (
     <section id="projects" className={classes.section}>
@@ -36,6 +41,7 @@ const Tiles = ({ projects, selected, setSelected }) => {
           )}
         </ul>
       </div>
+      <Gradient primary={primary} secondary={secondary} />
     </section>
   );
 };

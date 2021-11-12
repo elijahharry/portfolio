@@ -76,6 +76,7 @@
   align-items: center;
   transition: all 600ms;
   cursor: pointer;
+  color: #fff;
 }
 
 .arrow svg {
