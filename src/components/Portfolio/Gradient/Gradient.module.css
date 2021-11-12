@@ -15,24 +15,24 @@
   flex-wrap: wrap;
   flex-direction: column;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(41, 41, 41, 1) 16%,
     rgba(0, 0, 0, 1) 36%,
     rgba(0, 0, 0, 1) 36%,
     rgba(48, 48, 48, 1) 51%,
-    rgba(84, 84, 84, 1) 72%,
+    rgb(48, 48, 48) 72%,
     rgba(37, 37, 37, 1) 90%,
     rgba(57, 57, 57, 1) 95%
-  );
-  animation: gradient 30s ease infinite;
+  ); */
+  /* animation: gradient 30s ease infinite; */
 }
 
 .color {
   width: 25%;
   height: 50%;
-  opacity: 0.5;
+  opacity: 0.25;
   transition: all 2s;
 }
 
