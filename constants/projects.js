@@ -20,6 +20,32 @@ const projects = [
     },
   },
   {
+    id: "treatable",
+    subheader: "Telemed",
+    header: "Treatable",
+    desc: "Project involves a large pre-existing codebase, and was my first time working in this type of environment. Hired to improve the design of and finish building out multiple portions of their site (/providers, /hcp).",
+    logo: "treatable.svg",
+    buttons: [
+      {
+        text: "Provider Pages",
+        href: "https://www.treatable.org/providers",
+        target: "_blank",
+      },
+      {
+        text: "Landing Page",
+        href: "https://www.treatable.org/hcp",
+        target: "_blank",
+      },
+    ],
+    featured: { src: "treatable.png" },
+    mockups: { prefix: "treatable", count: 4, type: "png" },
+    colors: {
+      primary: "#94d8eb",
+      secondary: "#699eca",
+    },
+    tech: ["next", "react", "graphql"],
+  },
+  {
     id: "storkies",
     header: "Storkies Merch",
     subheader: "eCommerce clothing",
@@ -46,32 +72,7 @@ const projects = [
       },
     ],
   },
-  {
-    id: "treatable",
-    subheader: "Telemed",
-    header: "Treatable",
-    desc: "Project involves a large pre-existing codebase, and was my first time working in this type of environment. Hired to improve the design of and finish building out multiple portions of their site (/providers, /hcp).",
-    logo: "treatable.svg",
-    buttons: [
-      {
-        text: "Provider Pages",
-        href: "https://www.treatable.org/providers",
-        target: "_blank",
-      },
-      {
-        text: "Landing Page",
-        href: "https://www.treatable.org/hcp",
-        target: "_blank",
-      },
-    ],
-    featured: { src: "treatable.png" },
-    mockups: { prefix: "treatable", count: 4, type: "png" },
-    colors: {
-      primary: "#94d8eb",
-      secondary: "#699eca",
-    },
-    tech: ["next", "react", "graphql"],
-  },
+
   {
     id: "distroave",
     subheader: "Cannabis Distributor",

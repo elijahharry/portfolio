@@ -37,14 +37,12 @@ const Phone = ({ isSelected, index, images, screen, cursor }) => {
     >
       <div
         className={`${classes.phone}`}
-        style={
-          {
-            // transform: `translateX(${transforms.x}px) translateY(${transforms.y}px)`,
-            // filter: `drop-shadow(${transforms.x * -1}px ${
-            //   transforms.y * -1
-            // }px 20px #0000004D)`,
-          }
-        }
+        style={{
+          transform: `translateX(${transforms.x}px) translateY(${transforms.y}px)`,
+          // filter: `drop-shadow(${transforms.x * -1}px ${
+          //   transforms.y * -1
+          // }px 20px #0000004D)`,
+        }}
       >
         <div ref={ref} className={classes.screen_p}>
           <div
