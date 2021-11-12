@@ -14,7 +14,7 @@
   justify-content: stretch;
   flex-wrap: wrap;
   flex-direction: column;
-  /* filter: blur(300px); */
+  filter: blur(30px);
   background-color: rgb(0, 0, 0);
   /* background-color: #fff; */
   /* background: linear-gradient(
@@ -28,13 +28,13 @@
     rgba(37, 37, 37, 1) 90%,
     rgba(57, 57, 57, 1) 95%
   ); */
-  /* animation: gradient 50s linear infinite; */
+  animation: gradient 50s linear infinite;
 }
 
 .color {
   width: 20%;
   height: 20%;
-  opacity: 0.2;
+  opacity: 0.3;
   transition: all 2s;
 }
 
@@ -45,7 +45,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: blur(150px);
+  /* backdrop-filter: blur(100px); */
 }
 
 /* @keyframes gradient {
@@ -62,12 +62,12 @@
 
 @keyframes gradient {
   0% {
-    transform: scale(2);
+    transform: scale(1.2);
   }
   50% {
-    transform: scale(3) rotate(360deg);
+    transform: scale(1.5) rotate(360deg);
   }
   100% {
-    transform: scale(2) rotate(720deg);
+    transform: scale(1.2) rotate(720deg);
   }
 }

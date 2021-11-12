@@ -1,0 +1,31 @@
+.loader {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  animation: load-in 2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(200px);
+}
+
+@keyframes load-in {
+  0% {
+    backdrop-filter: blur(200px);
+    opacity: 1;
+    background-color: rgb(0, 0, 0);
+  }
+  10% {
+    backdrop-filter: blur(200px);
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    backdrop-filter: blur(0px);
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+  }
+}

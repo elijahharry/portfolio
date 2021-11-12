@@ -1,11 +1,11 @@
 .section {
   position: relative;
   z-index: 2;
-  /* backdrop-filter: brightness(140%); */
-  backdrop-filter: brightness(70%) blur(30px);
+  backdrop-filter: brightness(105%) blur(20px);
+  /* backdrop-filter: brightness(70%) blur(30px); */
   transition: all 2s;
   color: #fff;
-  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.219);
+  /* box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.219); */
   /* background: #232526;
   background: -webkit-linear-gradient(to right, #2c2f30, #545658, #242627);
   background: linear-gradient(to right, #1a1c1d, #3c3e3f, #1a1c1d); */
@@ -24,9 +24,9 @@
   left: -10px;
   /* overflow: hidden; */
   z-index: 1;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))
+  /* filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))
     drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25))
-    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2)); */
 }
 
 .title {

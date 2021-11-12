@@ -32,7 +32,8 @@ button {
   font-family: "Inter", sans-serif;
 }
 body {
-  color: rgba(0, 0, 0, 0.87);
+  /* color: rgba(0, 0, 0, 0.87); */
+  color: #fff;
   margin: 0;
   font-size: 1.075rem;
   font-weight: 400;

@@ -47,8 +47,8 @@
   height: 220px;
   position: relative;
   overflow: hidden;
-  border-left: 3px solid rgb(48, 48, 48);
-  border-right: 3px solid rgb(48, 48, 48);
+  /* border-left: 3px solid rgb(48, 48, 48);
+  border-right: 3px solid rgb(48, 48, 48); */
 }
 
 .logo {
