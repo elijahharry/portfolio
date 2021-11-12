@@ -49,7 +49,7 @@ const projects = [
     id: "storkies",
     header: "Storkies Merch",
     subheader: "eCommerce clothing",
-    desc: "Frontend made with NextJS. Utilizes Shopify Storefront API to providing a products/orders management dashboard and secure checkout for merch sales. NodeJS backend for processing and uploading photos utilized in collages across the site.",
+    desc: "Frontend made with NextJS. Utilizes Shopify Storefront API to provide a product/order management dashboard and secure checkout for merch sales. NodeJS backend for uploading and processing photos utilized in collages across the site.",
     logo: "storkies.svg",
     mockups: { prefix: "storkies", count: 5, type: "png" },
     featured: { src: "storkies-1.png" },
