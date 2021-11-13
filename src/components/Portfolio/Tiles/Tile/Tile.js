@@ -10,7 +10,7 @@ const Tile = ({ project, handleSwitch, isSelected }) => {
       <div
         className={`${classes.tile} ${
           isSelected ? classes.tile_selected : classes.tile_def
-        }`}
+        } elevate-10`}
       >
         <div className={classes.bar}>
           <span className={`${classes.dot} ${classes.green}`} />

@@ -21,6 +21,15 @@
   width: 100%;
   position: relative;
   z-index: 2;
+  transition: all 200ms;
+}
+
+.dark {
+  filter: brightness(200%);
+}
+
+.light {
+  filter: invert(1);
 }
 
 @media (max-width: 960px) {

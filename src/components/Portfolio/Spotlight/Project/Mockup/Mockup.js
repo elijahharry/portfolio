@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { useScreenSize } from "@context/ScreenSize";
+import { useTheme } from "@context/Theme";
 import { trackCursor } from "@context/CursorPosition";
 import useInterval from "react-useinterval";
 
@@ -14,6 +15,8 @@ import classes from "./Mockup.module.css";
 const Mockup = ({ colors, type, images, count, isSelected, setGradient }) => {
   const screen = useScreenSize();
   const cursor = trackCursor();
+  const theme = useTheme();
+  const { dark } = theme;
 
   const [index, setIndex] = useState(0);
 
@@ -48,10 +51,11 @@ const Mockup = ({ colors, type, images, count, isSelected, setGradient }) => {
   for (let i = 0; i < count; i++) {
     bullets.push(
       <span
-        className={classes.bullet}
+        className={`${classes.bullet}${dark ? " elevate-3" : ""}`}
         style={{
           transform: `scale(${i === index ? 1.5 : 1})`,
-          backgroundColor: i === index ? colors.primary : "#fff",
+          backgroundColor:
+            i === index ? colors.primary : dark ? "#fff" : "#212121",
         }}
         onClick={() => setIndex(i)}
       />
@@ -84,7 +88,7 @@ const Mockup = ({ colors, type, images, count, isSelected, setGradient }) => {
             style={{ backgroundColor: colors.secondary }}
             className={`${classes.arrow} ${classes.arrow_left} ${
               isSelected ? classes.arrow_selected : classes.arrow_def
-            }`}
+            } elevate-5`}
           >
             <IoMdArrowDropleft />
           </span>
@@ -99,14 +103,14 @@ const Mockup = ({ colors, type, images, count, isSelected, setGradient }) => {
         <a
           className={`${classes.arrow_a}${
             autoDelay === 5000 ? ` ${classes.arrow_animated}` : ""
-          }`}
+          } `}
           onClick={() => handleClick("right")}
         >
           <span
             style={{ backgroundColor: colors.secondary }}
             className={`${classes.arrow} ${classes.arrow_right} ${
               isSelected ? classes.arrow_selected : classes.arrow_def
-            }`}
+            } elevate-5`}
           >
             <IoMdArrowDropright />
           </span>

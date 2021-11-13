@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useScreenSize } from "@context/ScreenSize";
+import { useTheme } from "@context/Theme";
 
 import Head from "./Head/Head";
 import Nav from "./Nav/Nav";
@@ -8,8 +9,13 @@ import SourceMenu from "./SourceMenu/SourceMenu";
 
 const Main = ({ children }) => {
   const screen = useScreenSize();
+  const theme = useTheme();
+  const { dark, toggleMode, modeChanged } = theme;
+
   const { resized } = screen;
+
   const [transitions, setTransitions] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => setTransitions(true), 80);
     return () => clearTimeout(timer);
@@ -18,11 +24,11 @@ const Main = ({ children }) => {
   return (
     <>
       <Head />
-      <Nav />
+      <Nav dark={dark} toggleMode={toggleMode} />
       <main
         className={`${transitions ? "main" : ""}${
-          resized ? " transition-zero" : ""
-        }`}
+          resized || modeChanged ? " transition-zero" : ""
+        } ${dark ? "dark-mode" : "light-mode"}`}
       >
         {children}
         <SourceMenu />

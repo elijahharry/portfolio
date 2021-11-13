@@ -1,0 +1,25 @@
+.toggle {
+  color: inherit;
+  position: relative;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 200ms;
+}
+
+.icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+.show {
+  transform: translateX(-50%) translateY(-50%) scaleX(1);
+}
+.hide {
+  transform: translateX(-50%) translateY(-50%) scaleX(0);
+}

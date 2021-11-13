@@ -44,7 +44,7 @@ const Phone = ({ isSelected, index, images, screen, cursor }) => {
           // }px 20px #0000004D)`,
         }}
       >
-        <div ref={ref} className={classes.screen_p}>
+        <div ref={ref} className={classes.screen_p + " elevate-8"}>
           <div
             className={classes.phone_track}
             style={{ transform: `translateX(-${index * width}px)` }}
@@ -59,7 +59,7 @@ const Phone = ({ isSelected, index, images, screen, cursor }) => {
               </div>
             ))}
           </div>
-          <div className={classes.phone_bar}></div>
+          <span className={classes.phone_bar} />
         </div>
       </div>
     </figure>

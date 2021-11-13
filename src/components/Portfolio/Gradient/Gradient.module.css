@@ -5,7 +5,7 @@
   z-index: -1;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 .gradient {
   width: 100%;
@@ -15,21 +15,6 @@
   justify-content: stretch;
   flex-wrap: wrap;
   flex-direction: column;
-  /* filter: blur(300px); */
-  /* background-color: rgb(0, 0, 0); */
-  /* background-color: #fff; */
-  /* background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(41, 41, 41, 1) 16%,
-    rgba(0, 0, 0, 1) 36%,
-    rgba(0, 0, 0, 1) 36%,
-    rgba(48, 48, 48, 1) 51%,
-    rgb(48, 48, 48) 72%,
-    rgba(37, 37, 37, 1) 90%,
-    rgba(57, 57, 57, 1) 95%
-  ); */
-  /* animation: gradient 50s linear infinite; */
 }
 
 .color {
@@ -63,6 +48,6 @@
 
 @media (max-width: 1160px) {
   .container {
-    opacity: 0.2;
+    opacity: 0.15;
   }
 }

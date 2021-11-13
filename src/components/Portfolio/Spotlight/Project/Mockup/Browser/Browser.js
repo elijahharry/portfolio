@@ -45,7 +45,7 @@ const Browser = ({ isSelected, index, images, screen, cursor }) => {
         }}
       >
         {/* <StandSvg /> */}
-        <div ref={ref} className={classes.monitor}>
+        <div ref={ref} className={classes.monitor + " elevate-5"}>
           <div className={classes.screen}>
             <div className={classes.bar}>
               <span className={`${classes.dot} ${classes.green}`} />

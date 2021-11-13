@@ -19,7 +19,7 @@ const Tile = ({ tile, index, isSelected, setSelected }) => {
       onClick={() => setSelected(tile.project_id)}
     >
       <div
-        className={classes.tile}
+        className={classes.tile + " elevate-8"}
         style={{ animationDelay: `${index * 30 + 300}ms` }}
       >
         <div className={classes.bar}>

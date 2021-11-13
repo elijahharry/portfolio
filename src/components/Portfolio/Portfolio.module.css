@@ -2,8 +2,16 @@
   max-height: 100vh;
   height: 100vh;
   padding-top: 100px;
+}
+
+.dark {
   background: #232526;
   background: linear-gradient(to right, #080808, #131313, #222222, #0f0f0f);
+}
+
+.light {
+  background: #fcfcfc;
+  background: linear-gradient(to right, #fcfcfc, #fcfcfc, #f7f7f7, #fcfcfc);
 }
 
 @media (max-width: 1160px) {

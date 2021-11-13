@@ -11,7 +11,7 @@
   min-height: 260px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   transition: all 500ms;
   pointer-events: none;
   z-index: 1;

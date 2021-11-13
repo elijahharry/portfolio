@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import { useTheme } from "@context/Theme";
 import shuffle from "@utils/shuffle";
 import classes from "./Technologies.module.css";
 
 const Technologies = ({ tech, isSelected }) => {
+  const theme = useTheme();
+  const { dark } = theme;
   const [technologies, setTechnologies] = useState([...tech]);
 
   useEffect(() => {
@@ -19,7 +22,7 @@ const Technologies = ({ tech, isSelected }) => {
           }}
           className={`${classes.logo} ${
             isSelected ? classes.logo_selected : classes.logo_def
-          } ${classes[t]}`}
+          } ${classes[t]} ${dark ? classes.logo_dark : classes.logo_light}`}
           src={`/img/${t}.svg`}
           key={`img-${t}`}
         />
