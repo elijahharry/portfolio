@@ -1,0 +1,112 @@
+.phone_track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.65s;
+}
+
+.phone_slide {
+  height: 100%;
+}
+
+.phone_container {
+  width: 100%;
+  height: 100%;
+  margin-inline: 0;
+  margin-block: 0;
+  transition: all 0.8s;
+  z-index: 3;
+}
+
+.phone_selected {
+  transform: scale(1);
+  transition-delay: 0.55s;
+}
+
+.phone_def {
+  transform: scale(1) translateY(100vh);
+  opacity: 0;
+}
+
+.phone {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  bottom: 10px;
+  right: -26px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+  pointer-events: none;
+  transition: all 100ms;
+}
+
+.screen_p {
+  background-color: rgb(34, 34, 34);
+  width: 48%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid rgb(43, 43, 43);
+  border-right: 1px solid rgb(43, 43, 43);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.phone_screen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  background-color: #fff;
+}
+
+.phone_bar {
+  height: 18px;
+  width: 105%;
+  background-color: rgb(37, 37, 37);
+  position: absolute;
+  bottom: 0;
+  left: -2.5%;
+  z-index: 1;
+  background: #232526;
+  /* background: linear-gradient(to bottom, #303030, #0c0c0c); */
+}
+
+.phone_bar::after {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background-color: rgb(65, 65, 65);
+  border: 1px solid rgb(116, 115, 115);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 50%;
+  background: linear-gradient(to bottom, rgb(105, 105, 105), rgb(65, 65, 65));
+}
+
+@media (max-width: 1160px) {
+  .phone {
+    right: -5vw;
+  }
+}
+
+@media (max-width: 610px) {
+  .phone {
+    right: -10vw;
+    width: 40vw;
+    height: 40vw;
+    bottom: -15vw;
+  }
+}

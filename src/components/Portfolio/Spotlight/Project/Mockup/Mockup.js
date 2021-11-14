@@ -12,7 +12,7 @@ import Phone from "./Phone/Phone";
 
 import classes from "./Mockup.module.css";
 
-const Mockup = ({ colors, type, images, count, isSelected, setGradient }) => {
+const Mockup = ({ colors, type, images, count, isSelected, domain }) => {
   const screen = useScreenSize();
   const cursor = trackCursor();
   const theme = useTheme();
@@ -77,6 +77,8 @@ const Mockup = ({ colors, type, images, count, isSelected, setGradient }) => {
         images={images.mobile}
         cursor={cursor}
         screen={screen}
+        domain={domain}
+        dark={dark}
       />
       <div
         className={`${classes.arrows} ${

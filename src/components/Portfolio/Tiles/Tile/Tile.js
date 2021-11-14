@@ -27,14 +27,7 @@ const Tile = ({ project, handleSwitch, isSelected }) => {
             blurDataURL={featured?.blur ? featured.blur : ""}
           />
         </div>
-        {/* <img src="/img/iphone.svg" className={classes.frame} /> */}
       </div>
-      {/* <img
-        className={`${classes.logo} ${
-          isSelected ? classes.logo_selected : classes.logo_def
-        }`}
-        src={`/img/${project.logo}`}
-      /> */}
     </li>
   );
 };

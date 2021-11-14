@@ -16,6 +16,7 @@ const Project = ({
   setSelected,
   setGradient,
   allImages,
+  dark,
 }) => {
   const screen = useScreenSize();
 
@@ -25,7 +26,9 @@ const Project = ({
       style={{ width: width, minWidth: width }}
       className={`${classes.project} ${
         isSelected ? classes.project_selected : classes.project_def
-      }`}
+      } ${
+        i === 0 ? classes.padding_mobile_extra : classes.padding_mobile_def
+      } ${dark ? classes.dark_border : classes.light_border}`}
       id={project.id}
     >
       {screen.width <= 1160 && (
@@ -52,6 +55,7 @@ const Project = ({
               isSelected={isSelected}
               colors={project?.colors}
               setGradient={setGradient}
+              domain={project?.domain}
             />
           ) : (
             <Mosaic

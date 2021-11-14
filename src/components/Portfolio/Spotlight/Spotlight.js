@@ -39,6 +39,7 @@ const Spotlight = ({
             setGradient={setGradient}
             allImages={allImages}
             key={project.id}
+            dark={dark}
           />
         ))}
       </div>

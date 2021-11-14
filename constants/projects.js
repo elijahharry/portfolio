@@ -25,6 +25,7 @@ const projects = [
     header: "Treatable",
     desc: "Project involves a large pre-existing codebase, and was my first time working in this type of environment. Hired to improve the design of and finish building out multiple portions of their site (/providers, /hcp).",
     logo: "treatable.svg",
+    domain: "treatable.org",
     buttons: [
       {
         text: "Provider Pages",
@@ -51,6 +52,7 @@ const projects = [
     subheader: "eCommerce clothing",
     desc: "Frontend made with NextJS. Utilizes Shopify Storefront API to provide a product/order management dashboard and secure checkout for merch sales. NodeJS backend for uploading and processing photos utilized in collages across the site.",
     logo: "storkies.svg",
+    domain: "storkiesflyhigh.com",
     mockups: { prefix: "storkies", count: 5, type: "png" },
     featured: { src: "storkies-1.png" },
     colors: {
@@ -77,6 +79,7 @@ const projects = [
     id: "distroave",
     subheader: "Cannabis Distributor",
     header: "DistroAve Lounge",
+    domain: "distroave.co",
     desc: "Built a dashboard for the display of cannabis strains & relevant facts/stats. Includes a admin dashboard for adding/managing strains, and a NodeJS backend to the dynamic portions a reality. Rolled my own auth for this project.",
     logo: "distro.svg",
     buttons: [
@@ -103,6 +106,7 @@ const projects = [
     id: "alphasocial",
     subheader: "Finance Influencers",
     header: "Alpha Social Group",
+    domain: "alphasocialgroup.com",
     desc: "Built for a social media marketing firm within the finance space. Instead of using default Twitter embeds to display top tweets from their accounts, I created a backend that accesses the Twitter API, and if a URL is linked to within the tweet, scrapes and downloads Open Graph preview images for display on the frontend.",
     logo: "alpha.svg",
     featured: { src: "alphasoc-1.png" },
@@ -130,6 +134,7 @@ const projects = [
     id: "turnkey",
     header: "TurnKey Diagnostics",
     subheader: "Diagnostics Company",
+    domain: "turnkeytests.com",
     desc: "Relatively static website. Utilizes Wordpress as a headless CMS, client can create their own blog posts within the Wordpress dashboard, which then pulled via GraphQL queries and displayed via NextJS' Incremental Static Regeneration.",
     logo: "turnkey.svg",
     featured: { src: "turnkey-1.png" },

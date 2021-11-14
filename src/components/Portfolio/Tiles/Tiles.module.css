@@ -2,14 +2,11 @@
   position: relative;
   z-index: 2;
   backdrop-filter: brightness(105%) blur(20px);
-  /* backdrop-filter: brightness(70%) blur(30px); */
   transition: all 2s;
   color: #fff;
-  box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  /* background: #232526;
-  background: -webkit-linear-gradient(to right, #2c2f30, #545658, #242627);
-  background: linear-gradient(to right, #1a1c1d, #3c3e3f, #1a1c1d); */
+  box-shadow: rgb(0 0 0 / 20%) -5px 6px 6px -3px,
+    rgb(0 0 0 / 14%) -5px 10px 14px 1px, rgb(0 0 0 / 12%) -5px 4px 18px 3px;
 }
 
 .row {
@@ -23,21 +20,15 @@
   position: relative;
   width: calc(100% + 20px);
   left: -10px;
-  /* overflow: hidden; */
   z-index: 1;
-  /* filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5))
-    drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25))
-    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2)); */
 }
 
 .title {
   position: absolute;
   transition: all 200ms;
-  opacity: 0.25;
+  opacity: 0.5;
   font-size: 1rem;
   top: 30px;
-  /* left: 50%;
-  transform: translateX(-50%); */
 }
 .title_show {
   /* transform: scale(1); */

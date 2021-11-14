@@ -11,7 +11,7 @@
 
 .light {
   background: #fcfcfc;
-  background: linear-gradient(to right, #fcfcfc, #fcfcfc, #f7f7f7, #fcfcfc);
+  background: linear-gradient(to right, #f1f1f1, #f1f1f1, #f7f7f7, #f1f1f1);
 }
 
 @media (max-width: 1160px) {

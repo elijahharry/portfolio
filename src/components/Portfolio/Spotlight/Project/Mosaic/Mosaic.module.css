@@ -20,7 +20,16 @@
 @media (max-width: 1160px) {
   .mosaic {
     flex-basis: 100%;
+    left: -5%;
+    /* animation: mosaic-mobile 60s infinite; */
+  }
+}
+
+@media (max-width: 790px) {
+  .mosaic {
     animation: mosaic-mobile 60s infinite;
+    min-height: 400px;
+    height: 400px;
   }
 }
 
@@ -29,7 +38,7 @@
     transform: translateX(-10%);
   }
   50% {
-    transform: translateX(-80%);
+    transform: translateX(-70%);
   }
   100% {
     transform: translateX(-10%);

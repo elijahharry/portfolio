@@ -1,20 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import useInterval from "react-useinterval";
-import { FiSearch, FiWifi, FiBatteryCharging } from "react-icons/fi";
 
 import classes from "./Phone.module.css";
-import projects from "@constants/projects";
 
-const Phone = ({ isSelected, index, images, screen, cursor, domain, dark }) => {
+const Phone = ({ isSelected, index, images, screen, cursor }) => {
   const ref = useRef();
   const [width, setWidth] = useState(0);
   const [transforms, setTransforms] = useState({ x: 0, y: 0 });
-  const [time, setTime] = useState("7:00");
-
-  useInterval(() => {
-    const current = getTime();
-    setTime(current);
-  }, 1000);
 
   const grabWidth = () => {
     const p = ref.current.offsetWidth;
@@ -55,26 +46,6 @@ const Phone = ({ isSelected, index, images, screen, cursor, domain, dark }) => {
       >
         <div ref={ref} className={classes.screen_p + " elevate-8"}>
           <div
-            className={`${classes.notch} ${
-              dark ? classes.notch_dark : classes.notch_light
-            }`}
-          >
-            {time}
-            <span>
-              <FiWifi /> <FiBatteryCharging />
-            </span>
-          </div>
-          <div
-            className={`${classes.top_bar} ${
-              dark ? classes.top_dark : classes.top_light
-            }`}
-          >
-            <div className={classes.search}>
-              <FiSearch />
-              {domain && <span>{domain}</span>}
-            </div>
-          </div>
-          <div
             className={classes.phone_track}
             style={{ transform: `translateX(-${index * width}px)` }}
           >
@@ -84,11 +55,11 @@ const Phone = ({ isSelected, index, images, screen, cursor, domain, dark }) => {
                 style={{ width: width, minWidth: width }}
                 key={`phone-img-${i}`}
               >
-                <img className={classes.phone_img} src={`/img/${img.src}`} />
+                <img className={classes.phone_screen} src={`/img/${img.src}`} />
               </div>
             ))}
           </div>
-          {/* <span className={classes.phone_bar} /> */}
+          <span className={classes.phone_bar} />
         </div>
       </div>
     </figure>
@@ -96,10 +67,3 @@ const Phone = ({ isSelected, index, images, screen, cursor, domain, dark }) => {
 };
 
 export default Phone;
-
-const getTime = () => {
-  const date = new Date();
-  const options = { hour: "numeric", minute: "numeric" };
-  const time = new Intl.DateTimeFormat("en-US", options).format(date);
-  return time.replace(" PM", "").replace(" AM", "");
-};

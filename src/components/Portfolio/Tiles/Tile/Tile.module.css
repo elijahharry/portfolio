@@ -26,6 +26,7 @@
 
 .tile_def {
   transform: translateY(70px);
+  /* filter: grayscale(100%); */
 }
 
 .tile_def:hover {

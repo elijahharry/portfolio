@@ -57,7 +57,8 @@ body {
   font-size: 1.075rem;
   font-weight: 400;
   line-height: 1.43;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
+  font-family: "Public Sans", sans-serif;
 }
 
 a {
