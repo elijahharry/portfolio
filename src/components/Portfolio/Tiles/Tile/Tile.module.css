@@ -17,7 +17,7 @@
   z-index: 1;
 }
 .tile img {
-  transition: all 0.8s;
+  transition: all 1s;
 }
 
 .tile_selected {

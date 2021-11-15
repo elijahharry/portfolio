@@ -15,7 +15,8 @@ const projects = [
     ],
     featured: { src: "distroave-1.png" },
     colors: {
-      primary: "#3ba3ff",
+      // primary: "#c7ff2e",
+      primary: "#21c29c",
       secondary: "#662eff",
     },
   },
@@ -23,7 +24,7 @@ const projects = [
     id: "treatable",
     subheader: "Telemed",
     header: "Treatable",
-    desc: "Project involves a large pre-existing codebase, and was my first time working in this type of environment. Hired to improve the design of and finish building out multiple portions of their site (/providers, /hcp).",
+    desc: "Project involves a large pre-existing codebase and team of developers. Hired to improve the design of and finish building out multiple portions of their site (/providers, /hcp).",
     logo: "treatable.svg",
     domain: "treatable.org",
     buttons: [
@@ -44,7 +45,7 @@ const projects = [
       primary: "#94d8eb",
       secondary: "#699eca",
     },
-    tech: ["next", "react"],
+    tech: ["next", "react", "mui"],
   },
   {
     id: "storkies",

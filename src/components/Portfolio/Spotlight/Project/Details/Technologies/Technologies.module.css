@@ -31,7 +31,7 @@
 }
 
 .logo_light {
-  filter: sepia(100%) brightness(-5000%);
+  filter: sepia(100%) brightness(0%);
 }
 
 .logo_selected {
@@ -73,4 +73,8 @@
 
 .graphql {
   width: 95px;
+}
+
+.mui {
+  width: 35px;
 }

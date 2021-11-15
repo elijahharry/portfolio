@@ -19,11 +19,11 @@ const Gradient = ({ primary, secondary }) => {
           className={classes.color}
           style={{ backgroundColor: secondary }}
         />
-        <span className={classes.color} style={{ backgroundColor: primary }} />
         <span
           className={classes.color}
           style={{ backgroundColor: secondary }}
         />
+        <span className={classes.color} style={{ backgroundColor: primary }} />
       </div>
       <span className={classes.overlay} />
     </div>

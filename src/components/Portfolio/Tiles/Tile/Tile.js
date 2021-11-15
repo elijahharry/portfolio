@@ -3,7 +3,11 @@ import classes from "./Tile.module.css";
 
 const Tile = ({ project, handleSwitch, isSelected }) => {
   const { mockups } = project;
-  const featured = `${mockups.prefix}-1-c.${mockups.type}`;
+  const featured = project?.images?.desktop[0]
+    ? project.images.desktop[0]
+    : null;
+
+  console.log(project);
 
   return (
     <li className={classes.holder} onClick={handleSwitch}>
@@ -18,14 +22,16 @@ const Tile = ({ project, handleSwitch, isSelected }) => {
           <span className={`${classes.dot} ${classes.red}`} />
         </div>
         <div className={classes.screen}>
-          <Image
-            src={`/img/${featured}`}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center top"
-            placeholder={featured?.blur ? "blur" : "empty"}
-            blurDataURL={featured?.blur ? featured.blur : ""}
-          />
+          {featured && (
+            <Image
+              src={`/img/${featured.src}`}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center top"
+              placeholder={featured?.blur ? "blur" : "empty"}
+              blurDataURL={featured?.blur ? featured.blur : ""}
+            />
+          )}
         </div>
       </div>
     </li>

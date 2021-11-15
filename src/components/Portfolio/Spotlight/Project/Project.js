@@ -28,7 +28,7 @@ const Project = ({
         isSelected ? classes.project_selected : classes.project_def
       } ${
         i === 0 ? classes.padding_mobile_extra : classes.padding_mobile_def
-      } ${dark ? classes.dark_border : classes.light_border}`}
+      } ${i !== 0 ? (dark ? classes.dark_border : classes.light_border) : ""}`}
       id={project.id}
     >
       {screen.width <= 1160 && (

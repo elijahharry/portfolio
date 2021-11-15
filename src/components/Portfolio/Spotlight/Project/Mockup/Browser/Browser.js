@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import StandSvg from "./StandSvg/StandSvg";
+import Image from "next/image";
 
 import classes from "./Browser.module.css";
 const Browser = ({ isSelected, index, images, screen, cursor }) => {
@@ -62,7 +62,14 @@ const Browser = ({ isSelected, index, images, screen, cursor }) => {
                   className={classes.computer_slide}
                   key={`browser-img-${i}`}
                 >
-                  <img src={`/img/${img.src}`} />
+                  <Image
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="top center"
+                    src={`/img/${img.src}`}
+                    placeholder={img?.blur ? "blur" : "empty"}
+                    blurDataURL={img?.blur ? img.blur : ""}
+                  />
                 </div>
               ))}
             </div>

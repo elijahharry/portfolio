@@ -6,31 +6,35 @@
 }
 
 .button {
-  transition: all 50ms;
+  transition: all 0.75s;
 }
 
 .button button {
   display: inline-block;
   outline: 0;
   border: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   letter-spacing: 1px;
   font-weight: 400;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
-  border-radius: 3px;
-  padding: 8px 13px;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 6px 10px;
   white-space: nowrap;
   background-color: transparent;
   display: inline-flex;
   align-items: center;
   position: relative;
-  transition: all 0.75s;
+  transition: all 100ms;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
 }
-.button:hover {
-  opacity: 0.7;
-  transform: scale(0.95);
+.button:hover button {
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  transform: scale(0.97);
 }
 
 .button svg {
@@ -39,10 +43,10 @@
   margin-right: 5px;
 }
 
-.button_selected button {
+.button_selected {
   transform: scale(1);
 }
-.button_def button {
+.button_def {
   /* transform: scale(0.2) translateX(-500px) translateY(-50px); */
   transform: translateX(-75vw);
   opacity: 0;

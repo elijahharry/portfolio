@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import useInterval from "react-useinterval";
 import { FiSearch, FiWifi, FiBatteryCharging } from "react-icons/fi";
 
@@ -14,7 +15,7 @@ const Phone = ({ isSelected, index, images, screen, cursor, domain, dark }) => {
   useInterval(() => {
     const current = getTime();
     setTime(current);
-  }, 1000);
+  }, 5000);
 
   const grabWidth = () => {
     const p = ref.current.offsetWidth;
@@ -84,7 +85,14 @@ const Phone = ({ isSelected, index, images, screen, cursor, domain, dark }) => {
                 style={{ width: width, minWidth: width }}
                 key={`phone-img-${i}`}
               >
-                <img className={classes.phone_img} src={`/img/${img.src}`} />
+                <Image
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="top center"
+                  src={`/img/${img.src}`}
+                  placeholder={img?.blur ? "blur" : "empty"}
+                  blurDataURL={img?.blur ? img.blur : ""}
+                />
               </div>
             ))}
           </div>

@@ -8,7 +8,7 @@ export function useTheme() {
 
 export default function ColorsProvider({ children }) {
   const [dark, setDark] = useState(true);
-  const [primary, setPrimary] = useState("#7831B3");
+  const [primary, setPrimary] = useState("#21c29c");
   const [secondary, setSecondary] = useState("#477DED");
   const [partnerLogo, setPartnerLogo] = useState(null);
   const [modeChanged, setModeChanged] = useState(false);

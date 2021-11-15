@@ -64,7 +64,7 @@
     padding-bottom: 100px;
   }
   .dark_border {
-    border-top: 8px solid #fff;
+    border-top: 8px solid rgb(22, 22, 22);
   }
   .light_border {
     border-top: 8px solid #fff;

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTheme } from "@context/Theme";
 import { useSourceMenu } from "@context/SourceMenu";
 import Link from "next/link";
 
@@ -8,26 +9,38 @@ import classes from "./Buttons.module.css";
 
 const Buttons = ({ logo, colors, buttons, pickRandom, isSelected }) => {
   const { primary, secondary } = colors;
+  const theme = useTheme();
+  const { dark } = theme;
   const menu = useSourceMenu();
   const { setMenu } = menu;
 
   const elements = [];
   buttons.map((button, i) => {
     const even = i % 2 === 0;
-    const styles = even
+    const buttonStyles = even
       ? {
           backgroundColor: secondary,
           border: `2px solid ${secondary}`,
+        }
+      : {
+          border: `2px solid ${primary}`,
+          color: dark ? primary : "#fff",
+          backgroundColor: dark ? "transparent" : primary,
+          // color: primary,
+          // backgroundColor: "transparent",
+        };
+
+    const containerStyles = even
+      ? {
           transitionDelay: ".5s",
           zIndex: 1,
         }
       : {
-          border: `2px solid ${primary}`,
-          color: primary,
           marginLeft: 15,
           transitionDelay: ".45s",
           zIndex: 2,
         };
+
     let icons = [];
 
     const textForTest = button.text.toLowerCase();
@@ -46,8 +59,9 @@ const Buttons = ({ logo, colors, buttons, pickRandom, isSelected }) => {
               isSelected ? classes.button_selected : classes.button_def
             }`}
             onClick={pickRandom}
+            style={containerStyles}
           >
-            <button style={styles}>
+            <button style={buttonStyles}>
               {icons}
               {button.text}
             </button>
@@ -67,8 +81,9 @@ const Buttons = ({ logo, colors, buttons, pickRandom, isSelected }) => {
                 logo: logo,
               })
             }
+            style={containerStyles}
           >
-            <button style={styles}>
+            <button style={buttonStyles}>
               {icons}
               {button.text}
             </button>
@@ -86,13 +101,9 @@ const Buttons = ({ logo, colors, buttons, pickRandom, isSelected }) => {
             className={`${classes.button} ${
               isSelected ? classes.button_selected : classes.button_def
             }`}
+            style={containerStyles}
           >
-            <button
-              style={styles}
-              className={`${classes.button}  ${
-                isSelected ? classes.button_selected : classes.button_def
-              }`}
-            >
+            <button style={buttonStyles}>
               {icons}
               {button.text}
             </button>

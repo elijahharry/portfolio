@@ -30,7 +30,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: blur(150px);
+  backdrop-filter: blur(90px);
 }
 
 @keyframes gradient {
