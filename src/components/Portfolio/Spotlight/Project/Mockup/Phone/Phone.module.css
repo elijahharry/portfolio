@@ -11,7 +11,7 @@
 }
 
 .phone_slide img {
-  transition: all 1s;
+  transition: all 200ms;
 }
 
 .phone_container {
