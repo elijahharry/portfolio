@@ -19,3 +19,8 @@
 .light {
   color: #000;
 }
+
+.item {
+  display: flex;
+  align-items: stretch;
+}

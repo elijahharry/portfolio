@@ -3,6 +3,7 @@
   position: relative;
   width: 2rem;
   cursor: pointer;
+  margin-left: 12px;
 }
 
 .icon {
