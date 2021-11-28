@@ -86,7 +86,7 @@ const projects = [
     buttons: [
       {
         text: "Review site",
-        href: "https://distroave.co/buyers",
+        href: "https://distroave-frontend.vercel.app/buyers",
         target: "_blank",
       },
       {
