@@ -6,6 +6,7 @@
   top: 0;
   left: 0;
   opacity: 0.8;
+  overflow: hidden;
 }
 .gradient {
   width: 100%;
@@ -15,12 +16,7 @@
   justify-content: stretch;
   flex-wrap: wrap;
   flex-direction: column;
-}
-
-.color {
-  width: 25%;
-  height: 50%;
-  transition: all 2s;
+  filter: blur(120px);
 }
 
 .overlay {
@@ -30,18 +26,22 @@
   height: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: blur(90px);
+  transition: all 600ms;
+  background: #21c29c;
+  background: linear-gradient(217deg, #21c29c, #662eff 30.71%, #21c29c 70%),
+    linear-gradient(127deg, #662eff, #21c29c 70.71%),
+    linear-gradient(336deg, #21c29c, #662eff 70.71%);
 }
 
 @keyframes gradient {
   0% {
-    transform: scale(2);
+    transform: scaleX(1);
   }
   50% {
-    transform: scale(3) rotate(360deg);
+    transform: scaleX(1.6);
   }
   100% {
-    transform: scale(2) rotate(720deg);
+    transform: scaleX(1);
   }
 }
 
