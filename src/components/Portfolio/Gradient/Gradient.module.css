@@ -16,7 +16,6 @@
   justify-content: stretch;
   flex-wrap: wrap;
   flex-direction: column;
-  filter: blur(120px);
 }
 
 .overlay {
@@ -26,7 +25,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  transition: all 600ms;
+  transition: opacity 600ms;
   background: #21c29c;
   background: linear-gradient(217deg, #21c29c, #662eff 30.71%, #21c29c 70%),
     linear-gradient(127deg, #662eff, #21c29c 70.71%),

@@ -26,9 +26,9 @@ const Gradient = ({ primary, secondary }) => {
         className={classes.gradient}
         style={{
           background: primary,
-          background: `linear-gradient(217deg, ${primary}, ${secondary} 30.71%, ${primary} 70%),
-            linear-gradient(127deg, ${secondary}, ${primary} 70.71%),
-            linear-gradient(336deg, ${primary}, ${secondary} 70.71%)`,
+          background: `linear-gradient(217deg, ${current.primary}, ${current.secondary} 30.71%, ${current.primary} 70%),
+            linear-gradient(127deg, ${current.secondary}, ${current.primary} 70.71%),
+            linear-gradient(336deg, ${current.primary}, ${current.secondary} 70.71%)`,
         }}
       />
       <span
