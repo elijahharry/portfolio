@@ -41,18 +41,14 @@ const Gradient = ({ primary, secondary }) => {
         className={classes.gradient}
         style={{
           background: primary,
-          background: `linear-gradient(217deg, ${current.primary}, ${current.secondary} 30.71%, ${current.primary} 70%),
-            linear-gradient(127deg, ${current.secondary}, ${current.primary} 70.71%),
-            linear-gradient(336deg, ${current.primary}, ${current.secondary} 70.71%)`,
+          background: `linear-gradient(217deg, ${current.secondary}, ${current.primary} 33%, ${current.secondary} 66%, ${current.primary} 100%)`,
         }}
       />
       <span
         className={classes.overlay}
         style={{
           opacity: switched ? 1 : 0,
-          background: `linear-gradient(217deg, ${previous.primary}, ${previous.secondary} 30.71%, ${previous.primary} 70%),
-          linear-gradient(127deg, ${previous.secondary}, ${previous.primary} 70.71%),
-          linear-gradient(336deg, ${previous.primary}, ${previous.secondary} 70.71%)`,
+          background: `linear-gradient(217deg, ${previous.secondary}, ${previous.primary} 33%, ${previous.secondary} 66%, ${previous.primary} 100%)`,
         }}
       />
       <span
