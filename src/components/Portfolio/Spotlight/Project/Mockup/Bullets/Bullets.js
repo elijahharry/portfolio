@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import { IoMdArrowDropright, IoMdArrowDropleft } from "react-icons/io";
 import { FaHandPointer } from "react-icons/fa";
 
@@ -11,6 +13,7 @@ const Bullets = ({
   dark,
   autoDelay,
   handleClick,
+  setIndex,
 }) => {
   const bullets = [];
   for (let i = 0; i < count; i++) {
@@ -27,11 +30,18 @@ const Bullets = ({
     );
   }
 
+  const [disabled, setDisabled] = useState(false);
+  useEffect(() => {
+    setDisabled(true);
+    const timer = setTimeout(() => setDisabled(false), 750);
+    return () => clearTimeout(timer);
+  }, [index]);
+
   return (
     <div
       className={`${classes.arrows} ${
         isSelected ? classes.arrows_selected : classes.arrows_def
-      }`}
+      }${disabled ? ` ${classes.disabled}` : ""}`}
     >
       <a className={classes.arrow_a} onClick={() => handleClick("left")}>
         <span

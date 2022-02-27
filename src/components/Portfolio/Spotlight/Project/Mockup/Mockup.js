@@ -84,6 +84,7 @@ const Mockup = ({ colors, images, count, isSelected, domain }) => {
         dark={dark}
         autoDelay={autoDelay}
         handleClick={handleClick}
+        setIndex={setIndex}
       />
     </div>
   );

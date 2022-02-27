@@ -11,6 +11,10 @@
   bottom: 3%;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 .arrows_selected {
   z-index: 10;
 }

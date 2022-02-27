@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 import classes from "./Browser.module.css";
 
@@ -25,7 +24,7 @@ const Browser = ({ current, next, previous, img, i }) => {
   }, [current, next, previous]);
 
   return (
-    <motion.div
+    <div
       className={`${classes.computer} ${
         current
           ? classes.current + " elevate-5"
@@ -35,8 +34,8 @@ const Browser = ({ current, next, previous, img, i }) => {
           ? classes.previous + " elevate-8"
           : classes.offscreen + " elevate-2"
       }`}
-      animate={{ scale: scale, x: x }}
-      transition={{ type: "spring", duration: 1.2 }}
+      // animate={{ scale: scale, x: x }}
+      // transition={{ type: "spring", duration: 1.2 }}
     >
       <div className={classes.screen}>
         <div className={classes.bar}>
@@ -58,7 +57,7 @@ const Browser = ({ current, next, previous, img, i }) => {
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

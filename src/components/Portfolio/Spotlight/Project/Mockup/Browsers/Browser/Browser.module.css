@@ -6,7 +6,6 @@
   justify-content: center;
   position: absolute;
   z-index: 1;
-  /* transition: all 800ms; */
   border-radius: 3px;
   overflow: hidden;
   pointer-events: none;
@@ -15,22 +14,26 @@
 .current {
   /* transform: scale(1); */
   z-index: 2;
+  transition: all 600ms;
 }
 
 .next {
   transform: scale(0.6) translateX(50%);
   z-index: 1;
+  transition: all 800ms;
 }
 
 .previous {
   z-index: 3;
   transform: scale(1.1) translateX(200vw);
   /* opacity: 0; */
+  transition: all 1.7s;
 }
 
 .offscreen {
   transform: scale(0.6) translateX(200vw);
   z-index: 0;
+  transition: all 1.7s;
 }
 
 .screen {
@@ -76,5 +79,9 @@
 @media (max-width: 1160px) {
   .computer {
     max-width: 90vw;
+  }
+  .previous,
+  .offscreen {
+    transition: all 400ms;
   }
 }
