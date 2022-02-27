@@ -15,6 +15,7 @@ const Browsers = ({ projectSelected, current, next, previous, images }) => {
           previous={previous === i}
           index={i}
           img={img}
+          key={i.toString()}
         />
       ))}
     </figure>

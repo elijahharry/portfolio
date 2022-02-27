@@ -38,8 +38,8 @@ const Spotlight = ({
             setSelected={setSelected}
             setGradient={setGradient}
             allImages={allImages}
-            key={project.id}
             dark={dark}
+            key={i.toString()}
           />
         ))}
       </div>
