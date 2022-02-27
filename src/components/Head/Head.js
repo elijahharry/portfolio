@@ -42,7 +42,7 @@ const Header = () => {
       <meta property="og:type" content="website" />
       <meta
         property="og:title"
-        content="Hi, I'm Elijah. A full-stack developer based in Milwaukee."
+        content="Hi, I'm Elijah: Full-Stack Developer in Milwaukee, WI."
       />
       <meta name="twitter:card" content="summary" />
       <meta
