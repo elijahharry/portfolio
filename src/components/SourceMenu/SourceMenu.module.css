@@ -4,10 +4,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.486);
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.85);
   transition: all 500ms;
-  backdrop-filter: blur(10px) brightness(70%);
+  backdrop-filter: blur(10px);
   color: #fff;
 }
 
@@ -105,16 +105,18 @@
 
 .exit {
   position: absolute;
-  top: 40px;
-  right: 100px;
+  top: 5vh;
+  /* right: 100px; */
+  right: 10px;
   font-size: 5rem;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.9;
+  transition: all 100ms;
 }
 
 .exit:hover {
-  filter: brightness(80%);
-  transform: scale(0.9);
+  opacity: 1;
+  transform: scale(0.98);
 }
 
 @media (max-width: 900px) {

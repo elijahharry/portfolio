@@ -9,6 +9,7 @@
   width: 100%;
   position: relative;
   min-height: 260px;
+  max-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,16 +17,16 @@
   pointer-events: none;
   z-index: 1;
 }
-.tile img {
+/* .tile img {
   transition: all 1s;
-}
+} */
 
 .tile_selected {
-  transform: translateY(0);
+  transform: translateY(12%);
 }
 
 .tile_def {
-  transform: translateY(70px);
+  transform: translateY(30%);
   /* filter: grayscale(100%); */
 }
 

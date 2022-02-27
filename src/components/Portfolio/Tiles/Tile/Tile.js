@@ -3,9 +3,12 @@ import classes from "./Tile.module.css";
 
 const Tile = ({ project, handleSwitch, isSelected }) => {
   const { mockups } = project;
-  const featured = project?.images?.desktop[0]
-    ? project.images.desktop[0]
-    : null;
+  const featured =
+    project?.featured && !isNaN(project.featured)
+      ? project.images.desktop[project.featured - 1]
+      : project?.images?.desktop[0]
+      ? project.images.desktop[0]
+      : null;
 
   console.log(project);
 

@@ -1,0 +1,83 @@
+.computer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  transition: all 800ms;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.current {
+  transform: scale(1);
+  z-index: 2;
+}
+
+.next {
+  transform: scale(0.6) translateX(50%);
+  z-index: 1;
+}
+
+.previous {
+  z-index: 3;
+  transform: scale(1.1) translateX(200vw);
+  opacity: 0;
+}
+
+.offscreen {
+  transform: scale(0.6) translateX(200vw);
+  z-index: 0;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image img {
+  transition: all 1s;
+}
+
+.bar {
+  width: 100%;
+  height: 22px;
+  background-color: rgb(48, 48, 48);
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.dot {
+  margin-left: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.red {
+  background: rgb(219, 76, 76);
+}
+
+.yellow {
+  background: rgb(255, 194, 63);
+}
+
+.green {
+  background: rgb(29, 187, 113);
+}
+
+@media (max-width: 1160px) {
+  .computer {
+    max-width: 90vw;
+  }
+}

@@ -45,27 +45,17 @@ const Phone = ({ isSelected, index, images, screen, cursor, domain, dark }) => {
         isSelected ? classes.phone_selected : classes.phone_def
       }`}
     >
-      <div
-        className={`${classes.phone}`}
-        style={
-          {
-            // transform: `translateX(${transforms.x}px) translateY(${transforms.y}px)`,
-            // filter: `drop-shadow(${transforms.x * -1}px ${
-            //   transforms.y * -1
-            // }px 20px #0000004D)`,
-          }
-        }
-      >
+      <div className={`${classes.phone}`}>
         <div ref={ref} className={classes.screen_p + " elevate-8"}>
           <div
             className={`${classes.notch} ${
               dark ? classes.notch_dark : classes.notch_light
             }`}
           >
-            {time}
+            {/* {time}
             <span>
               <FiWifi /> <FiBatteryCharging />
-            </span>
+            </span> */}
           </div>
           <div
             className={`${classes.top_bar} ${

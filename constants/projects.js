@@ -13,7 +13,6 @@ const projects = [
         target: "_blank",
       },
     ],
-    featured: { src: "distroave-1.png" },
     colors: {
       // primary: "#c7ff2e",
       primary: "#21c29c",
@@ -24,7 +23,7 @@ const projects = [
     id: "treatable",
     subheader: "Telemed",
     header: "Treatable",
-    desc: "Project involves a large pre-existing codebase and team of developers. Hired to improve the design of and finish building out multiple portions of their site (/providers, /hcp).",
+    desc: "Project involves a large pre-existing codebase and team of developers. Hired to improve the design of and finish building out multiple portions of their site (/checkout, /account, /labs/std, /providers & more).",
     logo: "treatable.svg",
     domain: "treatable.org",
     buttons: [
@@ -39,7 +38,7 @@ const projects = [
         target: "_blank",
       },
     ],
-    featured: { src: "treatable.png" },
+    featured: 2,
     mockups: { prefix: "treatable", count: 4, type: "png" },
     colors: {
       primary: "#94d8eb",
@@ -55,7 +54,7 @@ const projects = [
     logo: "storkies.svg",
     domain: "storkiesflyhigh.com",
     mockups: { prefix: "storkies", count: 5, type: "png" },
-    featured: { src: "storkies-1.png" },
+    // featured: { src: "storkies-1.png" },
     colors: {
       primary: "#F49302",
       secondary: "#3d84e0",
@@ -95,7 +94,7 @@ const projects = [
         target: "_blank",
       },
     ],
-    featured: { src: "distro-1.png" },
+    // featured: { src: "distro-1.png" },
     mockups: { prefix: "distro", count: 4, type: "png" },
     colors: {
       primary: "#46b652",
@@ -110,7 +109,7 @@ const projects = [
     domain: "alphasocialgroup.com",
     desc: "Built for a social media marketing firm within the finance space. Instead of using default Twitter embeds to display top tweets from their accounts, I created a backend that accesses the Twitter API, and if a URL is linked to within the tweet, scrapes and downloads Open Graph preview images for display on the frontend.",
     logo: "alpha.svg",
-    featured: { src: "alphasoc-1.png" },
+    // featured: { src: "alphasoc-1.png" },
     mockups: { prefix: "alpha", count: 3, type: "png" },
     colors: {
       primary: "#55dde7",
@@ -138,7 +137,7 @@ const projects = [
     domain: "turnkeytests.com",
     desc: "Relatively static website. Utilizes Wordpress as a headless CMS, client can create their own blog posts within the Wordpress dashboard, which then pulled via GraphQL queries and displayed via NextJS' Incremental Static Regeneration.",
     logo: "turnkey.svg",
-    featured: { src: "turnkey-1.png" },
+    // featured: { src: "turnkey-1.png" },
     mockups: { prefix: "turnkey", count: 4, type: "png" },
     tech: ["next", "react", "graphql"],
     colors: {
