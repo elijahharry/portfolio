@@ -28,10 +28,6 @@ export default function ScreenProvider({ children }) {
     return () => clearTimeout(timer);
   }, [width, height]);
 
-  useEffect(() => {
-    console.log(recentResize);
-  }, [recentResize]);
-
   return (
     <ScreenSize.Provider
       value={{

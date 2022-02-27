@@ -10,8 +10,6 @@ const Tile = ({ project, handleSwitch, isSelected }) => {
       ? project.images.desktop[0]
       : null;
 
-  console.log(project);
-
   return (
     <li className={classes.holder} onClick={handleSwitch}>
       <div

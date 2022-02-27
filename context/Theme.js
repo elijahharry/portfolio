@@ -7,7 +7,7 @@ export function useTheme() {
 }
 
 export default function ColorsProvider({ children }) {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const [primary, setPrimary] = useState("#21c29c");
   const [secondary, setSecondary] = useState("#477DED");
   const [partnerLogo, setPartnerLogo] = useState(null);
@@ -18,6 +18,25 @@ export default function ColorsProvider({ children }) {
     const timer = setTimeout(() => setModeChanged(false), 80);
     return () => clearTimeout(timer);
   }, [dark]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Check for dark mode on initial load
+      const query = window.matchMedia("(prefers-color-scheme: dark)");
+      setDark(query?.matches ? true : false);
+      // Add an event listener in-case it changes
+      const modeMe = (e) => {
+        setDark(e.matches ? true : false);
+      };
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", modeMe);
+      return () =>
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .removeEventListener(modeMe);
+    }
+  }, []);
 
   const toggleMode = () => {
     setDark(!dark);

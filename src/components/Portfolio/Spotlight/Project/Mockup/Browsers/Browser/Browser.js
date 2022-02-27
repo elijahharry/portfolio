@@ -22,7 +22,6 @@ const Browser = ({ current, next, previous, img, i }) => {
       setScale(0.6);
       setX("100vw");
     }
-    console.log(previous);
   }, [current, next, previous]);
 
   return (
@@ -56,6 +55,7 @@ const Browser = ({ current, next, previous, img, i }) => {
             src={`/img/${img.src}`}
             placeholder={img?.blur ? "blur" : "empty"}
             blurDataURL={img?.blur ? img.blur : ""}
+            quality={30}
           />
         </div>
       </div>
