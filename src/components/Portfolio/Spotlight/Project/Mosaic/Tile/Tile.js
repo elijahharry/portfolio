@@ -27,7 +27,7 @@ const Tile = ({ tile, index, isSelected, setSelected }) => {
           <span className={`${classes.dot} ${classes.yellow}`} />
           <span className={`${classes.dot} ${classes.red}`} />
         </div>
-        <div className={classes.img}>
+        <div className={classes.img + " shimmer"}>
           <Image
             src={`/img/${tile.src}`}
             placeholder={tile?.blur ? "blur" : "empty"}

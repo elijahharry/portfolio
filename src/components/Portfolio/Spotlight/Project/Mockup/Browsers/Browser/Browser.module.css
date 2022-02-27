@@ -9,6 +9,7 @@
   /* transition: all 800ms; */
   border-radius: 3px;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .current {
@@ -17,18 +18,18 @@
 }
 
 .next {
-  /* transform: scale(0.6) translateX(50%); */
+  transform: scale(0.6) translateX(50%);
   z-index: 1;
 }
 
 .previous {
   z-index: 3;
-  /* transform: scale(1.1) translateX(200vw); */
+  transform: scale(1.1) translateX(200vw);
   /* opacity: 0; */
 }
 
 .offscreen {
-  /* transform: scale(0.6) translateX(200vw); */
+  transform: scale(0.6) translateX(200vw);
   z-index: 0;
 }
 
@@ -43,10 +44,6 @@
   height: 100%;
   position: relative;
 }
-/* 
-.image img {
-  transition: all 1s;
-} */
 
 .bar {
   width: 100%;

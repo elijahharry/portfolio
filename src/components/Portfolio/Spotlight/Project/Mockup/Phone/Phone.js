@@ -73,7 +73,7 @@ const Phone = ({ isSelected, index, images, screen, cursor, domain, dark }) => {
           >
             {images.map((img, i) => (
               <div
-                className={classes.phone_slide}
+                className={classes.phone_slide + " shimmer"}
                 style={{ width: width, minWidth: width }}
                 key={`phone-img-${i}`}
               >

@@ -22,7 +22,7 @@ const Tile = ({ project, handleSwitch, isSelected }) => {
           <span className={`${classes.dot} ${classes.yellow}`} />
           <span className={`${classes.dot} ${classes.red}`} />
         </div>
-        <div className={classes.screen}>
+        <div className={classes.screen + " shimmer"}>
           {featured && (
             <Image
               src={`/img/${featured.src}`}

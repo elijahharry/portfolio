@@ -45,7 +45,7 @@ const Browser = ({ current, next, previous, img, i }) => {
           <span className={`${classes.dot} ${classes.red}`} />
         </div>
         <div
-          className={classes.image}
+          className={classes.image + " shimmer"}
           // key={`browser-img-${i}`}
         >
           <Image
@@ -55,7 +55,6 @@ const Browser = ({ current, next, previous, img, i }) => {
             src={`/img/${img.src}`}
             placeholder={img?.blur ? "blur" : "empty"}
             blurDataURL={img?.blur ? img.blur : ""}
-            quality={30}
           />
         </div>
       </div>
