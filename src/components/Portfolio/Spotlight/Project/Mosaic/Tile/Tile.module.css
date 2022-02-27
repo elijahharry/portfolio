@@ -7,12 +7,12 @@
 }
 .sm {
   flex-grow: 1;
-  min-height: 20%;
+  min-height: 25%;
 }
 
 .md {
   flex-grow: 1.25;
-  min-height: 30%;
+  min-height: 32%;
 }
 
 .lg {
