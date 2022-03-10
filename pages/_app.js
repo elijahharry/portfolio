@@ -1,3 +1,5 @@
+import { GoogleAnalytics } from "nextjs-google-analytics";
+
 import ThemeProvider from "@context/Theme";
 import ScreenProvider from "@context/ScreenSize";
 import CursorTracker from "@context/CursorPosition";
@@ -11,6 +13,7 @@ function MyApp({ Component, pageProps }) {
       <CursorTracker>
         <SourceMenuProvider>
           <ThemeProvider>
+            <GoogleAnalytics />
             <Component {...pageProps} />
           </ThemeProvider>
         </SourceMenuProvider>
