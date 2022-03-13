@@ -5,10 +5,17 @@
   top: 0;
   left: 0;
   z-index: 200;
-  background-color: rgba(0, 0, 0, 0.85);
   transition: all 500ms;
-  backdrop-filter: blur(10px);
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.788);
   color: #fff;
+}
+
+.light {
+  background-color: rgba(255, 255, 255, 0.623);
+  color: rgb(15, 15, 15);
 }
 
 .open {

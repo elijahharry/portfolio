@@ -66,6 +66,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  transition: all 80ms;
+}
+
 @media (min-width: 600px) {
   body {
     font-size: 1.049rem;
@@ -177,6 +181,10 @@ p.intro {
   -ms-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
+}
+
+.blur {
+  filter: blur(20px);
 }
 
 .elevate-1 {

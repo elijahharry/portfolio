@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { useSourceMenu } from "@context/SourceMenu";
+import { useTheme } from "@context/Theme";
 
 import { BsGithub } from "react-icons/bs";
-import { CgDesktop } from "react-icons/cg";
-import { BiServer } from "react-icons/bi";
 import { IoIosCloseCircle } from "react-icons/io";
 
 import classes from "./SourceMenu.module.css";
@@ -11,6 +10,7 @@ import classes from "./SourceMenu.module.css";
 const SourceMenu = () => {
   const menu = useSourceMenu();
   const { repos, colors, logo, clearMenu } = menu;
+  const { dark } = useTheme();
 
   const [open, setOpen] = useState(false);
   const [animate, setAnimate] = useState(false);
@@ -41,15 +41,12 @@ const SourceMenu = () => {
   if (open) {
     return (
       <section
-        className={`${classes.section} ${
+        className={`${classes.section} ${dark ? classes.dark : classes.light} ${
           animate ? classes.open : classes.close
         }`}
         onClick={clearMenu}
       >
         <div className={`${classes.container} container`}>
-          {/* {theme?.logo && (
-            <img src={`/img/${theme.logo}`} className={classes.logo} />
-          )} */}
           <BsGithub className={classes.github} />
           <h2 className={classes.header}>Project Repositories</h2>
           <p>
@@ -65,7 +62,6 @@ const SourceMenu = () => {
                 }}
                 className={classes.button}
               >
-                {/* <CgDesktop /> */}
                 Frontend
               </button>
             </a>
@@ -78,7 +74,6 @@ const SourceMenu = () => {
                 }}
                 className={classes.button}
               >
-                {/* <BiServer /> */}
                 Backend
               </button>
             </a>

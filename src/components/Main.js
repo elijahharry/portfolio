@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useScreenSize } from "@context/ScreenSize";
 import { useTheme } from "@context/Theme";
+import { useSourceMenu } from "@context/SourceMenu";
 
 import Head from "./Head/Head";
 import Nav from "./Nav/Nav";
@@ -11,6 +12,7 @@ const Main = ({ children }) => {
   const screen = useScreenSize();
   const theme = useTheme();
   const { dark, toggleMode, modeChanged } = theme;
+  const { repos } = useSourceMenu();
 
   const { resized } = screen;
 
@@ -24,15 +26,15 @@ const Main = ({ children }) => {
   return (
     <>
       <Head />
-      <Nav dark={dark} toggleMode={toggleMode} />
       <main
         className={`${transitions ? "main" : ""}${
           resized || modeChanged ? " transition-zero" : ""
-        } ${dark ? "dark-mode" : "light-mode"}`}
+        } ${dark ? "dark-mode" : "light-mode"}${(repos && " blur") || ""}`}
       >
+        <Nav dark={dark} toggleMode={toggleMode} />
         {children}
-        <SourceMenu />
       </main>
+      <SourceMenu />
       <Loader />
     </>
   );
