@@ -7,8 +7,31 @@ import { AiFillGithub } from "react-icons/ai";
 import { IoIosShuffle } from "react-icons/io";
 import classes from "./Buttons.module.css";
 
+import Color from "color";
+
+const colors = new Map();
+const color = (rgb) => {
+  if (colors.has(rgb)) return colors.get(rgb);
+  const c = Color(rgb);
+  colors.set(rgb, c);
+  return c;
+};
+
 const Buttons = ({ logo, colors, buttons, pickRandom, isSelected }) => {
-  const { primary, secondary } = colors;
+  // const { primary, secondary } = colors;
+
+  const [{ primary, secondary }, setColors] = useState(() => ({
+    primary: color(colors.primary),
+    secondary: color(colors.secondary),
+  }));
+
+  useEffect(() => {
+    setColors({
+      primary: color(colors.primary),
+      secondary: color(colors.secondary),
+    });
+  }, [colors]);
+
   const theme = useTheme();
   const { dark } = theme;
   const menu = useSourceMenu();
@@ -19,13 +42,15 @@ const Buttons = ({ logo, colors, buttons, pickRandom, isSelected }) => {
     const even = i % 2 === 0;
     const buttonStyles = even
       ? {
-          backgroundColor: secondary,
+          backgroundColor: secondary.rgb().string(),
           border: `2px solid ${secondary}`,
+          "--color-dark": dark ? secondary.darken(0.05).rgb().string() : "#fff",
         }
       : {
-          border: `2px solid ${primary}`,
-          color: dark ? primary : "#fff",
-          backgroundColor: dark ? "transparent" : primary,
+          border: `2px solid ${primary.rgb().string()}`,
+          color: dark ? primary.rgb().string() : "#fff",
+          backgroundColor: dark ? "transparent" : primary.rgb().string(),
+          "--color-dark": dark ? primary.darken(0.05).rgb().string() : "#fff",
           // color: primary,
           // backgroundColor: "transparent",
         };
