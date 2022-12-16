@@ -61,11 +61,11 @@ const projects = [
     },
     tech: ["next", "react", "node", "mongo", "shopify", "graphql", "auth0"],
     buttons: [
-      {
-        text: "Review site",
-        href: "https://storkiesflyhigh.com/",
-        target: "_blank",
-      },
+      // {
+      //   text: "Review site",
+      //   href: "https://storkiesflyhigh.com/",
+      //   target: "_blank",
+      // },
       {
         text: "Github",
         function: "github",
@@ -117,11 +117,11 @@ const projects = [
     },
     tech: ["next", "react", "node", "mongo", "twitter"],
     buttons: [
-      {
-        text: "Review site",
-        href: "https://alphasocialgroup.com/",
-        target: "_blank",
-      },
+      // {
+      //   text: "Review site",
+      //   href: "https://alphasocialgroup.com/",
+      //   target: "_blank",
+      // },
       {
         text: "Github",
         function: "github",
@@ -145,11 +145,11 @@ const projects = [
       secondary: "#194578",
     },
     buttons: [
-      {
-        text: "Review site",
-        href: "https://turnkeytests.com/",
-        target: "_blank",
-      },
+      // {
+      //   text: "Review site",
+      //   href: "https://turnkeytests.com/",
+      //   target: "_blank",
+      // },
       {
         text: "Github",
         href: "https://github.com/elijahharry/turnkeydiag_client",
