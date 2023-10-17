@@ -83,11 +83,11 @@ const projects = [
     desc: "Built a dashboard for the display of cannabis strains & relevant facts/stats. Includes a admin dashboard for adding/managing strains, and a NodeJS backend to the dynamic portions a reality. Rolled my own auth for this project.",
     logo: "distro.svg",
     buttons: [
-      {
-        text: "Review site",
-        href: "https://distroave-frontend.vercel.app/buyers",
-        target: "_blank",
-      },
+      // {
+      //   text: "Review site",
+      //   href: "https://distroave-frontend.vercel.app/buyers",
+      //   target: "_blank",
+      // },
       {
         text: "Github",
         href: "https://github.com/elijahharry/distro_ave",
